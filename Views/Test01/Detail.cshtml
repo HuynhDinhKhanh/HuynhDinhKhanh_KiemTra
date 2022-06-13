@@ -1,0 +1,43 @@
+﻿@model KiemTra_HuynhDinhKhanh.Models.Test01DataContext
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detail</h2>
+
+<div>
+    <h4>Test01DataContext</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CommandTimeout)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommandTimeout)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ObjectTrackingEnabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ObjectTrackingEnabled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeferredLoadingEnabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeferredLoadingEnabled)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

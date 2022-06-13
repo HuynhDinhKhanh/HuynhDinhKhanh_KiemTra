@@ -1,0 +1,36 @@
+﻿@model IEnumerable<KiemTra_HuynhDinhKhanh.Models.SinhVien>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<table border="1px">
+    <tr>
+        <th>Ma Sv</th>
+        <th>Ho Ten</th>
+        <th>Gioi Tinh</th>
+        <th>Ngay Sinh</th>
+        <th>Hinh</th>
+        <th>Ma Nganh</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+     {
+        <tr>
+            <td>@item.MaSV</td>
+            <td>@item.HoTen</td>
+            <td>@item.GioiTinh</td>
+            <td>@item.NgaySinh</td>
+            <td>@item.Hinh</td>
+            <td>@item.MaNganh</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MaSV })
+                @Html.ActionLink("Detail", "Detail", new { id = item.MaSV })
+                @Html.ActionLink("Delete", "Delete", new { id = item.MaSV })
+            </td>
+        </tr>
+     }
+</table>
+@Html.ActionLink("Create", "Create", "SinhVien")
